@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vijaykumar Ponnam Portfolio</title>
+
+<style>
+ body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f4f9;color:#333;scroll-behavior:smooth}
+ 
+ /* NAVBAR */
+ .nav{background:#111;padding:12px;display:flex;justify-content:center;gap:15px;position:sticky;top:0;z-index:10}
+ .nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:5px}
+ .nav a:hover{background:#ffd32a;color:#111}
+
+ /* HEADER */
+ .header{display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 20px;background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff}
+ .header img{width:200px;height:200px;border-radius:50%;object-fit:cover;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,.4)}
+ .header h1{margin:0;font-size:2.6rem}
+ .divider{width:70px;height:4px;background:#ffd32a;margin:12px auto 15px}
+ .header h2{margin:5px 0;font-size:1.2rem;color:#ffd32a}
+ .btn{display:inline-block;padding:10px 18px;font-weight:700;border-radius:6px;text-decoration:none;transition:.3s}
+ .primary{background:#ffd32a;color:#2c2c54}
+ .primary:hover{background:#fbc531}
+ .scroll{margin-top:30px;background:#ffd32a;color:#2c2c54;border:none;width:50px;height:50px;border-radius:50%;font-size:1.8rem;cursor:pointer}
+
+ section{padding:50px 20px;text-align:center}
+ .about p{max-width:900px;margin:auto;font-size:1.2rem;line-height:1.7}
+
+ /* SKILLS */
+ .skills{background:#2c2c54;color:#fff}
+ .skills h2{color:#09ef55;font-size:2rem}
+ .skills-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
+ .skills-list span{background:#ffd32a;color:#2c2c54;padding:10px 15px;border-radius:6px;font-weight:600}
+
+ /* PROJECTS */
+ .projects h2{font-size:2.3rem;color:#111}
+ .project{display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:center;background:#fff;border-radius:12px;padding:25px;margin-bottom:35px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+ .project-details{max-width:550px;text-align:left}
+ .project-details h3{margin:0 0 10px;color:#2c2c54}
+ .project-details p{line-height:1.6}
+
+ /* CERTIFICATES */
+ .certificates{background:#2c2c54;color:#fff}
+ .certificates h2{color:#09ef55}
+ .certificate-list{display:flex;flex-wrap:wrap;justify-content:center;gap:25px}
+ .certificate{background:#fff;max-width:300px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.2);padding:15px;color:#111}
+ .certificate h3{font-size:1.1rem}
+
+ /* EDUCATION */
+ .edu-box{max-width:900px;margin:auto;background:white;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1);text-align:left}
+ .edu-box p{font-size:1.1rem}
+
+ /* CONTACT */
+ .contact h2{color:#2c2c54}
+ .contact-form{max-width:600px;margin:auto}
+ .contact input,.contact textarea{width:100%;padding:12px;margin:10px 0;border-radius:6px;border:1px solid #2c2c54;font-size:1rem}
+ .contact button{padding:10px 16px;background:#ffd32a;border:none;border-radius:6px;font-weight:700;cursor:pointer}
+ .contact button:hover{background:#fbc531}
+ .social a{margin:0 10px;color:#111;font-weight:bold}
+
+ .footer{background:#2c2c54;color:#fff;text-align:center;padding:10px}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+ <a href="#about">About</a>
+ <a href="#skills">Skills</a>
+ <a href="#education">Education</a>
+ <a href="#projects">Projects</a>
+ <a href="#certificates">Certificates</a>
+ <a href="#contact">Contact</a>
+</div>
+
+<div class="header">
+ <img src="myphoto.jpg.jpg">
+ <h1>VIJAYKUMAR PONNAM</h1>
+ <div class="divider"></div>
+ <h2>Master’s Applicant | Business & Finance | SAP FICO | Entrepreneurial Mindset</h2>
+
+ <a class="btn primary" target="_blank" href="https://drive.google.com/file/d/1_tfR__HYnGf-GaQ9tWTA0Qrj7_uBx6EH/view?usp=drivesdk">view Resume</a>
+ <button class="scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">↓</button>
+</div>
+
+<section id="about" class="about">
+<h2>About Me</h2>
+<p>
+I am Vijaykumar Ponnam from India, a Bachelor of Commerce (Computer Applications) graduate with 8.0 CGPA (Distinction). 
+I am passionate about Management, Finance, SAP FICO, Digital Business, Entrepreneurship and International Education. 
+I aim to pursue my Master’s through prestigious global scholarships and build a strong international career.
+</p>
+</section>
+
+<section id="skills" class="skills">
+<h2>Skills</h2>
+<div class="skills-list">
+<span>Microsoft Excel</span>
+<span>MS Word</span>
+<span>PowerPoint</span>
+<span>SAP FICO</span>
+<span>Tally ERP</span>
+<span>Data Research</span>
+<span>Leadership</span>
+<span>Entrepreneurship</span>
+<span>Time Management</span>
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="edu-box">
+ <p><strong>🎓 B.Com (Computer Applications)</strong></p>
+ <p>CGPA: 8.0 — Distinction</p>
+ <p>Key Areas: Business, Accounting, Finance, Computer Applications</p>
+</div>
+</section>
+
+<section id="projects" class="projects">
+<h2>Projects</h2>
+
+<div class="project">
+ <div class="project-details">
+  <h3>Customer Satisfaction Analysis of UPI Services</h3>
+  <p>Researched 100 participants to analyze satisfaction, failure rates, refund issues and trust factors in UPI Digital Payments.</p>
+  <a class="btn primary" target="_blank" href="https://drive.google.com/file/d/1-x0g-a7chsXruMkK9gVE_4aUVQdsChSw/view?usp=drivesdk">View Report</a>
+
+ </div>
+</div>
+
+<div class="project">
+ <div class="project-details">
+  <h3>Online Study Platform (onlibry.xyz)</h3>
+  <p>Created an online platform providing study material & mock tests, gaining experience in digital platforms & student engagement.</p>
+  <a class="btn primary" target="_blank" href="https://onlibry.xyz/">Visit Website</a>
+ </div>
+</div>
+</section>
+
+<section id="certificates" class="certificates">
+<h2>Certifications</h2>
+
+<div class="certificate-list">
+ <div class="certificate">
+  <h3>SAP FICO – End to End Practical Training</h3>
+  <p>Sree Krishna Infotech</p>
+  <a href="https://drive.google.com/file/d/1lOO9CXatJY1QCEpbyNDRO9WiToEYOxWf/view?usp=drivesdk" target="_blank">View Certificate</a>
+
+ </div>
+
+ <div class="certificate">
+  <h3>Social Entrepreneurship</h3>
+  <p>HP Foundation</p>
+  <a href="https://drive.google.com/file/d/1AaXsnZLGhBcTc0nI6mX8j_ytZ7oLiS_z/view?usp=drivesdk" target="_blank">View Certificate</a>
+
+ </div>
+ 
+
+ <div class="certificate">
+  <h3>Ethics & Integrity</h3>
+  <p>UNICEF</p>
+  <a href="https://drive.google.com/file/d/1A_ftniesjUwzfCWKlmsW51OyNgYk-hMX/view?usp=drivesdk" target="_blank">View Certificate</a>
+
+ </div>
+</div>
+</section>
+
+<section class="thanks">
+<h2 style="color:#ffd32a">Thank You!</h2>
+<p>I truly appreciate your time reviewing my portfolio. I am excited to explore opportunities to study, grow, and contribute globally.</p>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Me</h2>
+<p>Email: ponnamvijaykumar87@gmail.com</p>
+
+<div class="social">
+ <a href="https://www.linkedin.com/in/vijay-ponnam-6a66a9356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a> |
+ <a href="#">WhatsApp</a> |
+ <a href="https://www.instagram.com/vijay_87___?igsh=MWYwemE1bTg5aDRqYg==">Instagram</a>
+</div>
+
+<div class="contact-form">
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea rows="4" placeholder="Message"></textarea>
+  <button>Submit</button>
+</div>
+</section>
+
+<div class="footer">© 2025 Vijaykumar Ponnam — Portfolio</div>
+
+</body>
+</html>
