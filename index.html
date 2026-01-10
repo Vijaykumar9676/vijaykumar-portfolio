@@ -1,228 +1,1210 @@
-<html lang="en"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vijaykumar Ponnam Portfolio</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijaykumar Ponnam | Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --primary-purple: #7c3aed;
+            --accent-teal: #0d9488;
+            --accent-orange: #f97316;
+            --dark-navy: #1e293b;
+            --light-gray: #f8fafc;
+            --medium-gray: #e2e8f0;
+            --text-dark: #334155;
+            --text-light: #64748b;
+        }
 
-<style>
- body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f4f4f9;color:#333;scroll-behavior:smooth}
- 
- /* NAVBAR */
- .nav{background:#111;padding:12px;display:flex;justify-content:center;gap:15px;position:sticky;top:0;z-index:10}
- .nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:5px}
- .nav a:hover{background:#ffd32a;color:#111}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
- /* HEADER */
- .header{display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 20px;background:linear-gradient(135deg,#1e3c72,#2a5298);color:#fff}
- .header img{width:200px;height:200px;border-radius:50%;object-fit:cover;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,.4)}
- .header h1{margin:0;font-size:2.6rem}
- .divider{width:70px;height:4px;background:#ffd32a;margin:12px auto 15px}
- .header h2{margin:5px 0;font-size:1.2rem;color:#ffd32a}
- .btn{display:inline-block;padding:10px 18px;font-weight:700;border-radius:6px;text-decoration:none;transition:.3s}
- .primary{background:#ffd32a;color:#2c2c54}
- .primary:hover{background:#fbc531}
- .scroll{margin-top:30px;background:#ffd32a;color:#2c2c54;border:none;width:50px;height:50px;border-radius:50%;font-size:1.8rem;cursor:pointer}
+        html {
+            scroll-behavior: smooth;
+        }
 
- section{padding:50px 20px;text-align:center}
- .about p{max-width:900px;margin:auto;font-size:1.2rem;line-height:1.7}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light-gray);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
- /* SKILLS */
- .skills{background:#2c2c54;color:#fff}
- .skills h2{color:#09ef55;font-size:2rem}
- .skills-list{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:20px}
- .skills-list span{background:#ffd32a;color:#2c2c54;padding:10px 15px;border-radius:6px;font-weight:600}
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
 
- /* PROJECTS */
- .projects h2{font-size:2.3rem;color:#111}
- .project{display:flex;flex-wrap:wrap;gap:30px;justify-content:center;align-items:center;background:#fff;border-radius:12px;padding:25px;margin-bottom:35px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
- .project-details{max-width:550px;text-align:left}
- .project-details h3{margin:0 0 10px;color:#2c2c54}
- .project-details p{line-height:1.6}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
- /* CERTIFICATES */
- .certificates{background:#2c2c54;color:#fff}
- .certificates h2{color:#09ef55}
- .certificate-list{display:flex;flex-wrap:wrap;justify-content:center;gap:25px}
- .certificate{background:#fff;max-width:300px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.2);padding:15px;color:#111}
- .certificate h3{font-size:1.1rem}
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
 
- /* EDUCATION */
- .edu-box{max-width:900px;margin:auto;background:white;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,.1);text-align:left}
- .edu-box p{font-size:1.1rem}
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
- /* CONTACT */
- .contact h2{color:#2c2c54}
- .contact-form{max-width:600px;margin:auto}
- .contact input,.contact textarea{width:100%;padding:12px;margin:10px 0;border-radius:6px;border:1px solid #2c2c54;font-size:1rem}
- .contact button{padding:10px 16px;background:#ffd32a;border:none;border-radius:6px;font-weight:700;cursor:pointer}
- .contact button:hover{background:#fbc531}
- .social a{margin:0 10px;color:#111;font-weight:bold}
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
 
- .footer{background:#2c2c54;color:#fff;text-align:center;padding:10px}
-</style>
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+            padding: 8px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, 
+                rgba(37, 99, 235, 0.05) 0%, 
+                rgba(124, 58, 237, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--dark-navy);
+            line-height: 1.1;
+        }
+
+        .highlight-text {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: 'Poppins', sans-serif;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .profile-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-frame {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            padding: 8px;
+            background: white;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+        }
+
+        /* Section Common */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-navy);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .title-decoration {
+            width: 80px;
+            height: 4px;
+            background: var(--primary-blue);
+            margin: 0 auto 20px;
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about-content {
+            background: white;
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .about-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--text-dark);
+            text-align: center;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skill-item {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border: 2px solid var(--medium-gray);
+            transition: all 0.3s ease;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+        }
+
+        .skill-item i {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .skill-item span {
+            font-weight: 600;
+            color: var(--dark-navy);
+            font-size: 1rem;
+        }
+
+        /* Education Section */
+        .education-card {
+            background: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid var(--accent-teal);
+        }
+
+        .edu-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .edu-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-teal);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .edu-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--dark-navy);
+        }
+
+        .edu-highlight {
+            display: inline-block;
+            padding: 6px 15px;
+            background: rgba(13, 148, 136, 0.1);
+            border-radius: 6px;
+            color: var(--accent-teal);
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: linear-gradient(135deg, 
+                rgba(37, 99, 235, 0.03) 0%, 
+                rgba(124, 58, 237, 0.03) 100%);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-header {
+            padding: 30px 30px 20px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+        }
+
+        .project-card:nth-child(2) .project-header {
+            background: linear-gradient(135deg, rgba(13, 148, 136, 0.05), rgba(37, 99, 235, 0.05));
+        }
+
+        .project-card:nth-child(3) .project-header {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.05), rgba(124, 58, 237, 0.05));
+        }
+
+        .project-card:nth-child(4) .project-header {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(249, 115, 22, 0.05));
+        }
+
+        .project-icon {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark-navy);
+        }
+
+        .project-content {
+            padding: 0 30px 20px;
+            flex-grow: 1;
+        }
+
+        .project-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .project-links {
+            padding: 0 30px 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-sm {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+
+        /* Certificates Section */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .certificate-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            text-align: left;
+            border-top: 4px solid var(--accent-orange);
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificate-card:nth-child(2) {
+            border-top-color: var(--primary-purple);
+        }
+
+        .certificate-card:nth-child(3) {
+            border-top-color: var(--accent-teal);
+        }
+
+        .certificate-card:nth-child(4) {
+            border-top-color: var(--primary-blue);
+        }
+
+        .certificate-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(249, 115, 22, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+        }
+
+        .certificate-card:nth-child(2) .certificate-icon {
+            background: rgba(124, 58, 237, 0.1);
+            color: var(--primary-purple);
+        }
+
+        .certificate-card:nth-child(3) .certificate-icon {
+            background: rgba(13, 148, 136, 0.1);
+            color: var(--accent-teal);
+        }
+
+        .certificate-card:nth-child(4) .certificate-icon {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-blue);
+        }
+
+        .certificate-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark-navy);
+        }
+
+        .certificate-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--dark-navy);
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: 10px;
+            background: rgba(37, 99, 235, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid var(--medium-gray);
+            border-radius: 10px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-navy);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-quote {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .copyright {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .profile-frame {
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                padding: 30px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease;
+                gap: 25px;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .hero {
+                padding-top: 150px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .education-card,
+            .contact-info,
+            .contact-form {
+                padding: 40px 30px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .projects-grid,
+            .skills-grid {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            section {
+                padding: 80px 0;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .profile-frame {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+            
+            .btn-sm {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Vijaykumar</a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div class="nav">
- <a href="#about">About</a>
- <a href="#skills">Skills</a>
- <a href="#education">Education</a>
- <a href="#projects">Projects</a>
- <a href="#certificates">Certificates</a>
- <a href="#contact">Contact</a>
-</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1>Vijaykumar <span class="highlight-text">Ponnam</span></h1>
+                    <div class="hero-tagline">Master's Applicant | Business & management | finance</div>
+                    <p class="hero-description">A distinguished B.Com (Computer Applications) graduate with 8.0 CGPA, passionate about transforming businesses through financial expertise, digital innovation, and strategic management. Seeking global opportunities to contribute and grow.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="https://drive.google.com/file/d/1_tfR__HYnGf-GaQ9tWTA0Qrj7_uBx6EH/view?usp=drivesdk" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-file-alt"></i> View Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="profile-container">
+                    <div class="profile-frame">
+                        <img src="profile.jpg" alt="Vijaykumar Ponnam" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="header">
- <img src="profile.jpg">
- <h1>VIJAYKUMAR PONNAM</h1>
- <div class="divider"></div>
- <h2>Master’s Applicant | Business &amp; Finance | SAP FICO | Entrepreneurial Mindset</h2>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>About Me</h2>
+                <p>Professional Profile and Career Aspirations</p>
+            </div>
+            <div class="about-content">
+                <p class="about-text">I am Vijaykumar Ponnam from India, a Bachelor of Commerce (Computer Applications) graduate with 8.0 CGPA (Distinction). I am passionate about Management, Finance, SAP FICO, Digital Business, Entrepreneurship and International Education. I aim to pursue my Master's through prestigious global scholarships and build a strong international career.</p>
+            </div>
+        </div>
+    </section>
 
- <a class="btn primary" target="_blank" href="https://drive.google.com/file/d/1_tfR__HYnGf-GaQ9tWTA0Qrj7_uBx6EH/view?usp=drivesdk">view Resume</a>
- <button class="scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'});">↓</button>
-</div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>Skills</h2>
+                <p>Technical and Professional Competencies</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-file-excel"></i>
+                    <span>Microsoft Excel</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-file-word"></i>
+                    <span>MS Word</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <span>PowerPoint</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>SAP FICO</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-calculator"></i>
+                    <span>Tally ERP</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Data Research</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-users"></i>
+                    <span>Leadership</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Entrepreneurship</span>
+                </div>
+            
+            </div>
+        </div>
+    </section>
 
-<section id="about" class="about">
-<h2>About Me</h2>
-<p>
-I am Vijaykumar Ponnam from India, a Bachelor of Commerce (Computer Applications) graduate with 8.0 CGPA (Distinction). 
-I am passionate about Management, Finance, SAP FICO, Digital Business, Entrepreneurship and International Education. 
-I aim to pursue my Master’s through prestigious global scholarships and build a strong international career.
-</p>
-</section>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>Education</h2>
+                <p>Academic Background and Qualifications</p>
+            </div>
+            <div class="education-card">
+                <div class="edu-header">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h3>B.Com (Computer Applications)</h3>
+                        <div class="edu-highlight">CGPA: 8.0 — First Class with Distinction</div>
+                        <p style="color: var(--text-light);">Specialized in Business, Accounting, Finance, and Computer Applications with a focus on integrating technology with commerce education.</p>
+                    </div>
+                </div>
+                
+                <div class="edu-header">
+                    <div class="edu-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Intermediate (MPC)</h3>
+                        <div class="edu-highlight">Mathematics, Physics, Chemistry</div>
+                        <p style="color: var(--text-light);">Developed strong analytical and problem-solving skills that formed the foundation for business and financial analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="skills" class="skills">
-<h2>Skills</h2>
-<div class="skills-list">
-<span>Microsoft Excel</span>
-<span>MS Word</span>
-<span>PowerPoint</span>
-<span>SAP FICO</span>
-<span>Tally ERP</span>
-<span>Data Research</span>
-<span>Leadership</span>
-<span>Entrepreneurship</span>
-<span>Time Management</span>
-</div>
-</section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>Projects</h2>
+                <p>Practical Applications and Research Work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Customer Satisfaction Analysis of UPI Services</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Comprehensive research analyzing satisfaction, failure rates, refund issues and trust factors among 100 UPI Digital Payment users. Developed insights for service improvement.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://drive.google.com/file/d/1-x0g-a7chsXruMkK9gVE_4aUVQdsChSw/view?usp=drivesdk" target="_blank" class="btn btn-primary btn-sm">View Report</a>
+                    </div>
+                </div>
 
-<section id="education">
-<h2>Education</h2>
-<div class="edu-box">
- <p><strong>🎓 B.Com (Computer Applications)</strong></p>
- <p>CGPA: 8.0 — Distinction</p>
- <p>Key Areas: Business, Accounting, Finance, Computer Applications</p>
-</div>
-</section>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3>Market Entry Strategy – Starbucks in India</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Analyzed Starbucks' potential expansion in India, covering target customers, competition, pricing, marketing strategies, challenges, and strategic solutions.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://vijaykumar9676.github.io/myproject/" target="_blank" class="btn btn-primary btn-sm">View Project</a>
+                    </div>
+                </div>
 
-<section id="projects" class="projects">
-<h2>Projects</h2>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Online Study Platform (onlibry.xyz)</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Created an online platform providing study material & mock tests, gaining experience in digital platforms & student engagement.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://onlibry.xyz/" target="_blank" class="btn btn-primary btn-sm">Visit Website</a>
+                    </div>
+                </div>
 
-<div class="project">
- <div class="project-details">
-  <h3>Customer Satisfaction Analysis of UPI Services</h3>
-  <p>Researched 100 participants to analyze satisfaction, failure rates, refund issues and trust factors in UPI Digital Payments.</p>
-  <a class="btn primary" target="_blank" href="https://drive.google.com/file/d/1-x0g-a7chsXruMkK9gVE_4aUVQdsChSw/view?usp=drivesdk">View Report</a>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Scholarship Support Platform</h3>
+                    </div>
+                    <div class="project-content">
+                        <p>Created an online platform providing information on fully funded scholarships worldwide, gaining experience in web development and student guidance.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://vijaykumar9676.github.io/scholarshipwebsite/" target="_blank" class="btn btn-primary btn-sm">Visit Website</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1RFEOxJCrfwdO0dSPGp8Yqr57dw8s7mdP/edit?usp=drivesdk&ouid=112781997923430535328&rtpof=true&sd=true" target="_blank" class="btn btn-secondary btn-sm">View Feedback</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
- </div>
-</div>
- 
- <div class="project">
- <div class="project-details">
-  <h3>Market Entry Strategy – Starbucks in India</h3>
-  <p>A Self-Driven Market Entry Analysis Project</p>
-  <p>Analyzed Starbucks’ potential expansion in India, covering target customers, competition, pricing, marketing strategies, challenges, and strategic solutions for successful market entry.</p>
-  <a class="btn primary" target="_blank" href="https://vijaykumar9676.github.io/myproject/">View Project</a>
- </div>
-</div>
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>Certifications</h2>
+                <p>Professional Credentials and Achievements</p>
+            </div>
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SAP FICO – End to End Practical Training</h3>
+                    <p>Sree Krishna Infotech</p>
+                    <a href="https://drive.google.com/file/d/1lOO9CXatJY1QCEpbyNDRO9WiToEYOxWf/view?usp=drivesdk" target="_blank" class="btn btn-primary btn-sm">View Certificate</a>
+                </div>
 
-<div class="project">
- <div class="project-details">
-  <h3>Online Study Platform (onlibry.xyz)</h3>
-  <p>Created an online platform providing study material &amp; mock tests, gaining experience in digital platforms &amp; student engagement.</p>
-  <a class="btn primary" target="_blank" href="https://onlibry.xyz/">Visit Website</a>
- </div>
-</div>
-</section>
- <section id="extracurricular" class="projects">
-  <h2>Extracurricular Activities</h2>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Social Entrepreneurship</h3>
+                    <p>HP Foundation</p>
+                    <a href="https://drive.google.com/file/d/1AaXsnZLGhBcTc0nI6mX8j_ytZ7oLiS_z/view?usp=drivesdk" target="_blank" class="btn btn-primary btn-sm">View Certificate</a>
+                </div>
 
-  <div class="project">
-    <div class="project-details">
-      <h3>Global Scholarship Support Platform</h3>
-      <p>Created an online platform providing information on fully funded scholarships worldwide, gaining experience in web development, research, and student guidance.</p>
-      <a class="btn primary" target="_blank" href="https://vijaykumar9676.github.io/scholarshipwebsite/">Visit Website</a>
-      <br><br>
-      <a class="btn primary" target="_blank" href="https://docs.google.com/spreadsheets/d/1RFEOxJCrfwdO0dSPGp8Yqr57dw8s7mdP/edit?usp=drivesdk&amp;ouid=112781997923430535328&amp;rtpof=true&amp;sd=true">View Student Feedback</a>
-    </div>
-  </div>
-</section>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-scale-balanced"></i>
+                    </div>
+                    <h3>Ethics & Integrity</h3>
+                    <p>UNICEF</p>
+                    <a href="https://drive.google.com/file/d/1A_ftniesjUwzfCWKlmsW51OyNgYk-hMX/view?usp=drivesdk" target="_blank" class="btn btn-primary btn-sm">View Certificate</a>
+                </div>
 
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Volunteer – PRERANA 2K24</h3>
+                    <p>University PG College, Osmania University</p>
+                    <a href="https://drive.google.com/file/d/1UR7dVtf4bV5gXjRO2S3Lae9eC4rC8KN-/view?usp=drivesdk" target="_blank" class="btn btn-primary btn-sm">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="certificates" class="certificates">
-<h2>Certifications</h2>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <div class="title-decoration"></div>
+                <h2>Get In Touch</h2>
+                <p>Let's connect and explore opportunities</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:ponnamvijaykumar87@gmail.com" style="color: var(--primary-blue); text-decoration: none; font-weight: 600;">ponnamvijaykumar87@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p style="color: var(--text-light);">Hyderabad, India</p>
+                            <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 5px;">Open to global opportunities</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/vijay-ponnam-6a66a9356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/vijay_87___?igsh=MWYwemE1bTg5aDRqYg==" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="color: var(--dark-navy); margin-bottom: 30px;">Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="certificate-list">
- <div class="certificate">
-  <h3>SAP FICO – End to End Practical Training</h3>
-  <p>Sree Krishna Infotech</p>
-  <a href="https://drive.google.com/file/d/1lOO9CXatJY1QCEpbyNDRO9WiToEYOxWf/view?usp=drivesdk" target="_blank">View Certificate</a>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Vijaykumar Ponnam</div>
+                <p class="footer-quote">"Transforming business through financial expertise, digital innovation, and strategic vision."</p>
+                <a href="#about" class="btn btn-secondary" style="margin-top: 20px; background: rgba(255, 255, 255, 0.1); border-color: white; color: white;">
+                    <i class="fas fa-arrow-up"></i> Back to Top
+                </a>
+            </div>
+            <div class="copyright">
+                © 2025 Vijaykumar Ponnam — Professional Portfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
 
- </div>
+    <script>
+        // Mobile Navigation
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
 
- <div class="certificate">
-  <h3>Social Entrepreneurship</h3>
-  <p>HP Foundation</p>
-  <a href="https://drive.google.com/file/d/1AaXsnZLGhBcTc0nI6mX8j_ytZ7oLiS_z/view?usp=drivesdk" target="_blank">View Certificate</a>
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
 
- </div>
- 
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
 
- <div class="certificate">
-  <h3>Ethics &amp; Integrity</h3>
-  <p>UNICEF</p>
-  <a href="https://drive.google.com/file/d/1A_ftniesjUwzfCWKlmsW51OyNgYk-hMX/view?usp=drivesdk" target="_blank">View Certificate</a>
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 1500);
+        });
 
- </div> 
- <div class="certificate">
-  <h3>Volunteer – PRERANA 2K24</h3>
-  <p>University PG College, Osmania University (In Association with Telangana Commerce Association)</p>
-  <a href="https://drive.google.com/file/d/1UR7dVtf4bV5gXjRO2S3Lae9eC4rC8KN-/view?usp=drivesdk" target="_blank">View Certificate</a>
-</div>
-</div></section>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-<section class="thanks">
-<h2 style="color:#ffd32a">Thank You!</h2>
-<p>I truly appreciate your time reviewing my portfolio. I am excited to explore opportunities to study, grow, and contribute globally.</p>
-</section>
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.15)';
+            } else {
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+            }
+        });
 
-<section id="contact" class="contact">
-<h2>Contact Me</h2>
-<p>Email: ponnamvijaykumar87@gmail.com</p>
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
 
-<div class="social">
- <a href="https://www.linkedin.com/in/vijay-ponnam-6a66a9356?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app">LinkedIn</a> |
- <a href="#">WhatsApp</a> |
- <a href="https://www.instagram.com/vijay_87___?igsh=MWYwemE1bTg5aDRqYg==">Instagram</a>
-</div>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
-<div class="contact-form">
-  <input type="text" placeholder="Your Name">
-  <input type="email" placeholder="Your Email">
-  <textarea rows="4" placeholder="Message"></textarea>
-  <button>Submit</button>
-</div>
-</section>
+        // Observe elements to animate
+        document.querySelectorAll('.skill-item, .project-card, .certificate-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
 
-<div class="footer">© 2025 Vijaykumar Ponnam — Portfolio</div>
-
-
-
-
-
-
-
-</body></html>>
 
 
 
